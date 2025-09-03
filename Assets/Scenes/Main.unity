@@ -39247,6 +39247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointParent: {fileID: 1776635732}
+  hitEffect: {fileID: 5286328772216621839, guid: 41b57333fef1c834d8da0f4387d82975, type: 3}
+  appearEffect: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
 --- !u!1 &8161558180516952181
 GameObject:
   m_ObjectHideFlags: 0
