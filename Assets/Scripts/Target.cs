@@ -6,11 +6,10 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private Transform spawnPointParent;
     private List<Transform> allSpawns = new List<Transform>();
-    private string ichBinVerfuegbar;
+
     private void Awake()
     {
         GetSpawns();
-        string ichBinUnsichtbarMuahahaha;
     }
 
     private void GetSpawns()
@@ -23,8 +22,16 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Transform randomSpawn = allSpawns[Random.Range(0,allSpawns.Count)];
-        transform.SetPositionAndRotation
+        Move();
+    }
 
+    private void Move()
+    {
+        Transform randomSpawn;
+        do
+        {
+             randomSpawn = allSpawns[Random.Range(0, allSpawns.Count)];
+        } while (randomSpawn.position.Equals(transform.position));
+        transform.SetPositionAndRotation(randomSpawn.position, randomSpawn.rotation);
     }
 }
