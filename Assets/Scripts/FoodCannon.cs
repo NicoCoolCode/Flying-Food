@@ -10,7 +10,7 @@ public class FoodCannon : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             GameObject newFood =Instantiate(food, shootPoint.position, shootPoint.rotation);
-            newFood.GetComponent<Rigidbody>().velocity = shootPoint.TransformDirection(Vector3.forward * shootPower);
+            newFood.GetComponent<Rigidbody>().linearVelocity = shootPoint.TransformDirection(Vector3.forward * shootPower);
 
         }
     }
