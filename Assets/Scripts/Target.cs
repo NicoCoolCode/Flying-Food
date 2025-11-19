@@ -27,6 +27,7 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        GetComponent<AudioSource>().Play();
         Move();
     }
 
