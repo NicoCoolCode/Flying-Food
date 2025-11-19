@@ -4,9 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance { get; private set; }
     [SerializeField] private int timer=60;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private TMP_Text timesUpText;
+    [SerializeField] private TMP_Text scoreText;
+    private int score;
+
+    public void Score()
+    {
+        score++;
+        scoreText.text = "score: " + score.ToString();
+    }
+
+
     private void Start()
     {
         InvokeRepeating(nameof(Countdown),1,1);
@@ -28,5 +39,10 @@ public class GameManager : MonoBehaviour
     private void GoToMenu()
     {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 }

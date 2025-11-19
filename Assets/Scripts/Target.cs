@@ -8,8 +8,6 @@ public class Target : MonoBehaviour
     [SerializeField] private Transform spawnPointParent;
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private GameObject appearEffect;
-    [SerializeField] private TMP_Text scoreText;
-    private int score;
     private List<Transform> allSpawns = new List<Transform>();
 
     private void Awake()
@@ -33,8 +31,7 @@ public class Target : MonoBehaviour
 
     private void Move()
     {
-        score++;
-        scoreText.text = "score: "+ score.ToString();
+        GameManager.instance.Score();
         Instantiate(hitEffect,transform.position,transform.rotation);
         Transform randomSpawn;
         do

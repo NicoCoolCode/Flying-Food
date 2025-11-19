@@ -16486,7 +16486,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915531432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21625,6 +21625,7 @@ MonoBehaviour:
   timer: 60
   timerText: {fileID: 1012649031}
   timesUpText: {fileID: 295077060}
+  scoreText: {fileID: 915531434}
 --- !u!4 &1218914460
 Transform:
   m_ObjectHideFlags: 0
@@ -40065,7 +40066,6 @@ MonoBehaviour:
   spawnPointParent: {fileID: 1776635732}
   hitEffect: {fileID: 5286328772216621839, guid: 41b57333fef1c834d8da0f4387d82975, type: 3}
   appearEffect: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
-  scoreText: {fileID: 915531434}
 --- !u!82 &7673344882566302625
 AudioSource:
   m_ObjectHideFlags: 0
