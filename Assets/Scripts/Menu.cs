@@ -14,5 +14,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         highScoreText.text = "highScore: " + PlayerPrefs.GetInt("highscore");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

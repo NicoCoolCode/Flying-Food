@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private TMP_Text timesUpText;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text newHighscoreText;
+    
     private int score;
 
     public void Score()
@@ -30,7 +32,15 @@ public class GameManager : MonoBehaviour
         timerText.text = "timer; "+ timer.ToString();
         if (timer == 0)
         {
-            timesUpText.gameObject.SetActive(true);
+            if (score > PlayerPrefs.GetInt("highscore"))
+            {
+                newHighscoreText.gameObject.SetActive(true);
+                PlayerPrefs.SetInt("highscore", score);
+            }
+            else
+            {
+                timesUpText.gameObject.SetActive(true);
+            }
             Invoke(nameof(GoToMenu),3);
             CancelInvoke(nameof(Countdown));
         }
